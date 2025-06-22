@@ -11,7 +11,7 @@ function Header() {
       <Link className="site-logo" to="/">#BeeWise</Link>
 
       <nav className={menuOpen ? 'open' : ''}>
-        <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/" end onClick={() => setMenuOpen(false)}>Dashboard</NavLink>
         <NavLink to="/ph1" onClick={() => setMenuOpen(false)}>PH1</NavLink>
         <NavLink to="/ph2" onClick={() => setMenuOpen(false)}>PH2</NavLink>
         <NavLink to="/ph3" onClick={() => setMenuOpen(false)}>PH3</NavLink>

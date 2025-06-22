@@ -84,9 +84,12 @@ nav a {
 
 nav a:hover{
   color: var(--color-primary-hover);
+  text-decoration: underline;
 }
 nav a.active{
   color: var(--color-black);
+  text-decoration: underline;
+
 }
 
 /* Footer */
@@ -152,5 +155,135 @@ footer {
 @media (min-width: 769px) {
   .hamburger {
     display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* === Form container === */
+.signup-form,
+.login-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: var(--spacing-lg);
+  background-color: var(--color-light);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2); /* subtle golden shadow */
+  color: var(--color-black);
+  font-family: var(--font-main);
+}
+
+/* === Headings === */
+.signup-form h2,
+.login-form h2 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* === Form inputs === */
+.signup-form input,
+.login-form input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border: 1.5px solid var(--color-primary);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  transition: border-color 0.3s ease;
+}
+
+.signup-form input:focus,
+.login-form input:focus {
+  outline: none;
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 0 5px var(--color-primary-hover);
+}
+
+/* === Buttons === */
+.signup-form button,
+.login-form button {
+  width: 100%;
+  padding: var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover,
+.login-form button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* === OR divider === */
+.divider {
+  text-align: center;
+  margin: var(--spacing-md) 0;
+  font-weight: 600;
+  color: var(--color-black);
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-primary);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* === Google login/signup button === */
+.signup-form > button:last-of-type,
+.login-form > button:last-of-type {
+  margin-top: var(--spacing-sm);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-form > button:last-of-type:hover,
+.login-form > button:last-of-type:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-white);
+  border-color: var(--color-primary-hover);
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 480px) {
+  .signup-form,
+  .login-form {
+    margin: 1rem;
+    padding: var(--spacing-md);
   }
 }
