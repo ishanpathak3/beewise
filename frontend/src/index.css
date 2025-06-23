@@ -1,6 +1,8 @@
 :root {
-  --color-primary: #d4af37;      /* Warm gold (primary yellow) */
-  --color-primary-hover: #b88a21; /* Darker gold for hover */
+  --color-primary: #d4af37;
+  /* Warm gold (primary yellow) */
+  --color-primary-hover: #b88a21;
+  /* Darker gold for hover */
   --color-black: #000000;
   --color-white: #ffffff;
   --color-dark: #1a1a1a;
@@ -82,11 +84,12 @@ nav a {
   font-weight: 500;
 }
 
-nav a:hover{
+nav a:hover {
   color: var(--color-primary-hover);
   text-decoration: underline;
 }
-nav a.active{
+
+nav a.active {
   color: var(--color-black);
   text-decoration: underline;
 
@@ -143,12 +146,32 @@ footer {
   .hamburger span:nth-child(1) {
     top: 0;
   }
+
   .hamburger span:nth-child(2) {
     top: 9px;
   }
+
   .hamburger span:nth-child(3) {
     bottom: 0;
   }
+}
+
+
+.logout-button {
+  background: none;
+  border: none;
+  padding: var(--spacing-xs);
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.logout-button:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
 }
 
 /* Hide hamburger on large screens */
@@ -176,7 +199,8 @@ footer {
   background-color: var(--color-light);
   border: 1px solid var(--color-primary);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2); /* subtle golden shadow */
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2);
+  /* subtle golden shadow */
   color: var(--color-black);
   font-family: var(--font-main);
 }
@@ -262,8 +286,8 @@ footer {
 }
 
 /* === Google login/signup button === */
-.signup-form > button:last-of-type,
-.login-form > button:last-of-type {
+.signup-form>button:last-of-type,
+.login-form>button:last-of-type {
   margin-top: var(--spacing-sm);
   background-color: var(--color-white);
   color: var(--color-primary);
@@ -272,8 +296,8 @@ footer {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.signup-form > button:last-of-type:hover,
-.login-form > button:last-of-type:hover {
+.signup-form>button:last-of-type:hover,
+.login-form>button:last-of-type:hover {
   background-color: var(--color-primary-hover);
   color: var(--color-white);
   border-color: var(--color-primary-hover);
@@ -281,6 +305,7 @@ footer {
 
 /* === Responsive adjustments === */
 @media (max-width: 480px) {
+
   .signup-form,
   .login-form {
     margin: 1rem;
