@@ -25,7 +25,7 @@ function Header() {
         {user ? (
           <>
             <NavLink to="dashboard" end onClick={() => setMenuOpen(false)}>Dashboard</NavLink>
-            <NavLink to="ph1" onClick={() => setMenuOpen(false)}>PH1</NavLink>
+            <NavLink to="accounts" onClick={() => setMenuOpen(false)}>Accounts</NavLink>
             <NavLink to="ph2" onClick={() => setMenuOpen(false)}>PH2</NavLink>
             <NavLink to="ph3" onClick={() => setMenuOpen(false)}>PH3</NavLink>
             <button onClick={handleLogout} className="logout-button">Logout</button>
